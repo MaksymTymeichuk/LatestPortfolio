@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Itim&display=swap');
+
+
+@import url('reset.css');
+
+body {
+    background-image: url("static/mainbg.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: 0.5s all;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: #FFC0CB;
+    --shadow-color: rgb(255, 192, 203, 60%);
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    padding: 25px;
+    min-height: 500vh;
+    min-height: 500svh;
+
+}
+
+.page1 {
+    width: 100%;
+    height: 90vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    max-width: 1850px;
+    position: sticky;
+    top: 25px;
+    z-index: 2;
+    min-height: 50px;
+
+}
+
+.header__menu {
+    display: flex;
+    max-width: 580px;
+    min-height: 100%;
+    padding: 10px;
+    gap: 60px
+}
+
+.menu:hover {
+    color: var(--secondary-color);
+
+}
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    min-height: 50px;
+
+    gap: 60px;
+}
+
+.icon {
+    max-width: 70px;
+    min-height: 70px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    min-height: 600px;
+
+    margin-top: 50px;
+    padding-right: 100px;
+}
+
+.main__profile {
+    display: flex;
+    align-items: center;
+
+
+    width: 50%;
+    min-height: 600px;
+
+}
+
+.profile__intro {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 400px;
+    gap: 20px;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+
+
+}
+
+span {
+    font-size: 4em;
+}
+
+.second_color {
+    color: var(--secondary-color);
+}
+
+.profile__info {
+    font-size: 2em;
+    color: var(--secondary-color);
+    text-align: center;
+    width: 480px;
+    margin-top: -20%;
+}
+
+.profile__img_wrapper {
+    width: 500px;
+    height: 500px;
+    background: url('static/profile-pic.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: ellipse(300px 400px at 60% 50%);
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+.profile__images {
+    display: flex;
+    max-width: 50%;
+    min-height: 400px;
+
+
+}
+
+.page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position:relative;
+    margin-top:100px;
+    height: 100vh;
+    height: 100svh;
+    
+}
+
+.slider-show {
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 20%;
+    transition: .5s all;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.navigation {
+    position: absolute;
+    width: 10%;
+    height: 7%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #f5f5f5;
+    opacity: 50%;
+    transition: .5s all;
+}
+
+.nav:hover {
+    opacity: 100%;
+}
+
+input[name="btn"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+#btn1:checked~.slide1 {
+    margin-left: 0;
+}
+
+#btn2:checked~.slide2 {
+    margin-left: -20%;
+}
+
+#btn2:checked~.slide1{
+    visibility: hidden;
+}
